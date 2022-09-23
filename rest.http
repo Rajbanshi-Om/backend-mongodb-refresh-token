@@ -1,0 +1,39 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM0OTM4NDAsImV4cCI6MTY2MzQ5Mzg3MCwiYXVkIjoiNjMyNTMyNjU5NmQzMTQ1MDhhOWFkMzAyIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.Virq-lTC92x0DHHOF7Ot1CgZDcBPiZBHDiFhOWT-E3w
+
+### login route
+POST  http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email" : "yourstruly34@gmail.com",
+    "password" : "123456"
+}
+
+
+### Register route
+POST  http://localhost:3000/auth/register 
+Content-Type: application/json
+
+{
+    "email" : "newuser@gmail.com",
+    "password" : "123456"
+}
+
+
+
+### refresh token route
+POST  http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM1NzA1ODcsImV4cCI6MTY5NTEyODE4NywiYXVkIjoiNjMyNTM4MDMzYTViMTc3NjFmMzI1MzM5IiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.AUv_W-781qebl50MSpUT6wfHI0RgnJfiKfpDgGlqQcM"
+}
+
+### logout route
+DELETE   http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken" :  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM0OTIzOTcsImV4cCI6MTY5NTA0OTk5NywiYXVkIjoiNjMyNTMyNjU5NmQzMTQ1MDhhOWFkMzAyIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.qNNJ1bWolBipF1mH4SA36bfuS43udesW7_sS9joRMUU"
+}
